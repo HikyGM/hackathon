@@ -1,18 +1,18 @@
 <section class="space" style="margin-top: 5em; padding-top: 2em; background: #E3E3E3;">
-    <s class="container">
+    <div class="container">
     <div class="py-4 text-center">
         <?php
 
         if (isset($_REQUEST['id'])) {
             $ID_vote = mysqli_query($link, "SELECT * FROM `meetings` WHERE `meetings_id`='" . $_REQUEST['id'] . "'");
             $vote = mysqli_fetch_array($ID_vote, MYSQLI_ASSOC);
-            echo '<h2>';
+            echo '<h3>';
             echo $vote['meetings_title'];
-            print_r('</h2>
+            print_r('</h3>
         <hr class="my-4">
-        <p>');
+        <h4>');
             echo $vote['meetings_text'];
-            print_r('</p>
+            print_r('</h4>
         <hr class="my-4">
         <h2>
             Голосование
@@ -42,7 +42,7 @@
 
     <div class="card rare-wind-gradient chat-room">
         <div class="card-body">
-            <div class="row px-lg-2 px-2 mx-0">
+            <div class="row px-lg-2 mx-0">
                 <div class="col-md-12 px-lg-auto px-0">
                     <div class="chat-message">
 
@@ -51,7 +51,7 @@
                             <!-- Сообщение -->
 
                             <li class="d-flex justify-content-between mb-4">
-                                <div class="chat-body white p-3 ml-2 z-depth-1">
+                                <div class="chat-body white ml-2 z-depth-1">
                                     <div class="header">
                                         <strong class="primary-font">Brad Pitt</strong>
                                         <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
@@ -69,7 +69,7 @@
 
 
                             <li class="d-flex justify-content-between mb-4">
-                                <div class="chat-body white p-3 ml-2 z-depth-1">
+                                <div class="chat-body white ml-2 z-depth-1">
                                     <div class="header">
                                         <strong class="primary-font">Brad Pitt</strong>
                                         <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
@@ -83,10 +83,8 @@
                                     </p>
                                 </div>
                             </li>
-
-
                             <li class="d-flex justify-content-between mb-4">
-                                <div class="chat-body white p-3 ml-2 z-depth-1">
+                                <div class="chat-body white ml-2 z-depth-1">
                                     <div class="header">
                                         <strong class="primary-font">Brad Pitt</strong>
                                         <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
@@ -100,10 +98,8 @@
                                     </p>
                                 </div>
                             </li>
-
-
                             <li class="d-flex justify-content-between mb-4">
-                                <div class="chat-body white p-3 ml-2 z-depth-1">
+                                <div class="chat-body white ml-2 z-depth-1">
                                     <div class="header">
                                         <strong class="primary-font">Brad Pitt</strong>
                                         <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
@@ -117,10 +113,8 @@
                                     </p>
                                 </div>
                             </li>
-
-
                             <li class="d-flex justify-content-between mb-4">
-                                <div class="chat-body white p-3 ml-2 z-depth-1">
+                                <div class="chat-body white ml-2 z-depth-1">
                                     <div class="header">
                                         <strong class="primary-font">Brad Pitt</strong>
                                         <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
@@ -131,12 +125,18 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut
                                         labore et dolore magna aliqua.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut
-                                        labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="d-flex justify-content-between mb-4">
+                                <div class="chat-body white ml-2 z-depth-1">
+                                    <div class="header">
+                                        <strong class="primary-font">Brad Pitt</strong>
+                                        <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
+                                            ago</small>
+                                    </div>
+                                    <hr class="w-100">
+                                    <p class="mb-0">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut
                                         labore et dolore magna aliqua.

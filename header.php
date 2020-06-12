@@ -16,7 +16,10 @@
     <!-- Plugins CSS -->
     <link href="css/plugins.min.css" rel="stylesheet">
     <!-- Style CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <link href="css/app.css" rel="stylesheet">
+
     <!-- Your CSS -->
     <link href="css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -48,52 +51,7 @@
                             </span>
                 </button>
                 <!-- end of Nav Toggoler -->
-                <nav>
-                    <ul class="navbar-nav" id="navbar-nav">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="?page=blocks/disc_list">
-                                Собрания
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="?page=blocks/disc_add">
-                                Голосования
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="?page=blocks/news">
-                                Объявления
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Вопросы
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Заявки
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Опросы
-                            </a>
-                        </li>
-
-
-
-
-
-                    </ul>
-                    <!-- end of nav menu items -->
-                </nav>
+				<?php include("blocks/menu".$_SESSION["roles_id"].".php");?>
             </div>
             <div class="d-flex align-items-center ml-lg-1 ml-xl-2 mr-4 mr-sm-6 m-lg-0">
                 <a class="color--primary font-w--600 mr-2 d-none d-sm-inline-block" href="function/logout.php">

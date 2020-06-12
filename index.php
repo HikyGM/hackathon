@@ -19,3 +19,7 @@ if ($_SESSION['ID'] != 0) {
 } else {
     include('blocks/sign_IN.php');
 }
+
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";

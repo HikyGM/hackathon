@@ -1,18 +1,47 @@
 :root {
-    --body: #ffffff;
+    --body: #EFEFEF;
     --container: #ffffff;
     --main_color: #A0FFAC;
 }
 
-/*.container {
+
+body {
+    background: var(--body);
+}
+
+.container {
     background: var(--container);
     padding-top: 1rem!important;
     padding-bottom: .5rem!important;
-}*/
+}
 
+.bg-navbar {
+    background: var(--main_color);
+}
 
+.bg-button {
+    background: var(--main_color);
+    color: #343a40;
+    border-color: #343a40;
+}
 
+.bg-button:hover {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
 
+.nav-link {
+    border-top: 2px solid var(--main_color);
+    border-bottom: 2px solid var(--main_color);
+}
+
+.nav-link:hover {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    opacity: 1;
+    transition: all 0.3s;
+}
 
 
 input[type=datetime-local].form-control {
@@ -76,7 +105,4 @@ input[type=datetime-local].form-control {
 
 .custom-file-label::after{
     content: "Открыть...";
-}
-.table td, .table th{
-    text-align: center;
 }

@@ -1,14 +1,32 @@
-<ul class="navbar-nav m-auto mt-2 mt-lg-0">
-	<li class="nav-item active">
-		<a class="nav-link" href="">ТСЖ/УК 1</a>
-	</li>
-	<li class="nav-item active">
-		<a class="nav-link" href="">ТСЖ/УК 2</a>
-	</li>
-	<li class="nav-item active">
-		<a class="nav-link" href="">ТСЖ/УК 3</a>
-	</li>
-	<li class="nav-item active">
-		<a class="nav-link" href="">ТСЖ/УК 4</a>
-	</li>
-</ul>
+<nav>
+    <ul class="navbar-nav" id="navbar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link" href="?page=blocks/disc_list_tsg">
+                Собрания
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="?page=blocks/surveys_list">
+                Опросы
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="?page=blocks/applications_list">
+                Заявки от жителей
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="?page=blocks/news">
+                Служебные задания
+            </a>
+        </li>
+
+
+
+
+
+
+    </ul>
+    <!-- end of nav menu items -->
+</nav>

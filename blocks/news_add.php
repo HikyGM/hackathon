@@ -1,4 +1,5 @@
-<div class="container">
+<section class="space" style="margin-top: 5em; padding-top: 2em; background: #E3E3E3;">
+    <div class="container">
     <form method="post" action="function/news_add_script.php">
         <div class="row mb-2">
             <div class="col">
@@ -45,3 +46,4 @@
         </div>
     </form>
 </div>
+</section>
