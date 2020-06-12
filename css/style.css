@@ -9,11 +9,11 @@ body {
     background: var(--body);
 }
 
-.container {
+/*.container {
     background: var(--container);
     padding-top: 1rem!important;
     padding-bottom: .5rem!important;
-}
+}*/
 
 .bg-navbar {
     background: var(--main_color);

@@ -25,16 +25,16 @@ if ( isset( $_GET['code'] ) ) {
     $token = $response->access_token; // Токен
     $expiresIn = $response->expires_in; // Время жизни токена
     $userId = $response->user_id; // ID авторизовавшегося пользователя
-
-    $sql = "SELECT ID_user, ID_house FROM users WHERE ID_vk='" . $userId . "' LIMIT 1";
+    $sql = "SELECT u.users_id, u.roles_id, r.buildings_id FROM users u, registration r WHERE r.users_id = u.users_id and u.users_vk_id ='" . $userId . "' LIMIT 1";
     $query = mysqli_query($link, $sql);
     $data = mysqli_fetch_assoc($query);
 
     // Сохраняем токен в сессии
    // $_SESSION['ID'] = $userId;
     $_SESSION['token'] = $token;
-    $_SESSION['ID'] = $data['ID_user'];
-    $_SESSION['ID_house'] = $data['ID_house'];
+    $_SESSION['ID'] = $data['users_id'];
+    $_SESSION['ID_house'] = $data['buildings_id'];
+    $_SESSION['roles_id'] = $data['roles_id'];
     header("Location: ../index.php");
 
 

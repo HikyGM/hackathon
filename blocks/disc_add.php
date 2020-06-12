@@ -1,4 +1,6 @@
-<div class="container">
+<section class="pb-10 pt-0 blog-articles bg-color--primary-light--1" style="margin-top: 5em; padding-top: 2em; background: #E3E3E3;">
+    <div class="container" style="padding-top: 1em;">
+
     <form method="post" action="function/vote_add.php">
         <div class="row mb-2">
             <div class="col">
@@ -85,3 +87,4 @@
         </div>
     </form>
 </div>
+</section>

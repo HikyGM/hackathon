@@ -5,7 +5,7 @@ $id_page = mysqli_query($link, "SELECT * FROM `pages`");
 
 
 if ($_SESSION['ID'] != 0) {
-    $id_user = mysqli_query($link, "SELECT * FROM `users` WHERE ID_user='" . $_SESSION['ID'] . "' OR ID_vk='" . $_SESSION['ID'] . "'");
+    $id_user = mysqli_query($link, "SELECT * FROM `users` WHERE users_id='" . $_SESSION['ID'] . "'");
     $user_link = mysqli_fetch_array($id_user, MYSQLI_ASSOC);
     include('header.php');
     /*    $file = basename($_SERVER['PHP_SELF'], ".php");

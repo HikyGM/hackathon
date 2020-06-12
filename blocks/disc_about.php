@@ -2,15 +2,15 @@
     <div class="py-4 text-center">
         <?php
 
-        if (isset($_POST['btn_id_vote'])) {
-            $ID_vote = mysqli_query($link, "SELECT * FROM `votes` WHERE `ID_votes`='" . $_POST['id_vote'] . "'");
+        if (isset($_REQUEST['id'])) {
+            $ID_vote = mysqli_query($link, "SELECT * FROM `meetings` WHERE `meetings_id`='" . $_REQUEST['id'] . "'");
             $vote = mysqli_fetch_array($ID_vote, MYSQLI_ASSOC);
             echo '<h2>';
-            echo $vote['header'];
+            echo $vote['meetings_title'];
             print_r('</h2>
         <hr class="my-4">
         <p>');
-            echo $vote['text'];
+            echo $vote['meetings_text'];
             print_r('</p>
         <hr class="my-4">
         <h2>
