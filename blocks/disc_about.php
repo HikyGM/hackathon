@@ -1,4 +1,5 @@
-<div class="container">
+<section class="space" style="margin-top: 5em; padding-top: 2em; background: #E3E3E3;">
+    <s class="container">
     <div class="py-4 text-center">
         <?php
 
@@ -166,4 +167,5 @@
     </div>
 
 
-</div>
+
+</section>

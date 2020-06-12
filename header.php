@@ -19,15 +19,7 @@
     <link href="css/app.css" rel="stylesheet">
     <!-- Your CSS -->
     <link href="css/custom.css" rel="stylesheet">
-    </link>
-    </link>
-    </link>
-    </link>
-    </link>
-    </link>
-    </meta>
-    </meta>
-    </meta>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="theme-fern" data-animation="false" data-appearance="light" data-spy="scroll" data-target="#navbar-nav">
 
@@ -65,17 +57,17 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="?page=blocks/disc_add">
+                            <a class="nav-link" href="?page=blocks/disc_list">
                                 Собрания
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="?page=blocks/disc_add">
                                 Голосования
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="?page=blocks/news">
                                 Объявления
                             </a>
                         </li>

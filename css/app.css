@@ -2548,8 +2548,8 @@ a.justify-content-between .arrow_right,
 
 @media only screen and (min-width: 1200px) {
   .space {
-    padding-top: 8.5rem !important;
-    padding-bottom: 8.5rem !important;
+    padding-top: 5.5rem !important;
+    padding-bottom: 5.5rem !important;
   }
   .space--2 {
     padding-top: 15.3rem !important;
