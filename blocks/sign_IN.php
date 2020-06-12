@@ -1,20 +1,20 @@
 <?php
 // Авторизация ВК
- // Токен будем хранить в сессии
+// Токен будем хранить в сессии
 // Параметры приложения
-$clientId     = '7507638'; // ID приложения
+$clientId = '7507638'; // ID приложения
 $clientSecret = '5eQWWHWzc8rb8Xfe8jj4'; // Защищённый ключ
-$redirectUri  = 'https://lavkabonapart.ru/disc/function/VK_json.php'; // Адрес, на который будет переадресован пользователь после прохождения авторизации
+$redirectUri = 'https://lavkabonapart.ru/disc/function/VK_json.php'; // Адрес, на который будет переадресован пользователь после прохождения авторизации
 // Формируем ссылку для авторизации
 $params = array(
-    'client_id'     => $clientId,
-    'redirect_uri'  => $redirectUri,
+    'client_id' => $clientId,
+    'redirect_uri' => $redirectUri,
     'response_type' => 'code',
-    'v'             => '5.74', // (обязательный параметр) версия API, которую Вы используете https://vk.com/dev/versions
+    'v' => '5.74', // (обязательный параметр) версия API, которую Вы используете https://vk.com/dev/versions
     // Права доступа приложения https://vk.com/dev/permissions
     // Если указать "offline", полученный access_token будет "вечным" (токен умрёт, если пользователь сменит свой пароль или удалит приложение).
     // Если не указать "offline", то полученный токен будет жить 12 часов.
-    'scope'         => 'photos,offline',
+    'scope' => 'photos,offline',
 );
 
 // Авторизация ОК
@@ -25,9 +25,9 @@ $redirect_uri = 'https://lavkabonapart.ru/disc/function/OK_json.php'; // Ссы�
 
 $url = 'https://connect.ok.ru/oauth/authorize';
 $params2 = array(
-    'client_id'     => $client_id,
+    'client_id' => $client_id,
     'response_type' => 'code',
-    'redirect_uri'  => $redirect_uri
+    'redirect_uri' => $redirect_uri
 );
 
 ?>
@@ -35,19 +35,19 @@ $params2 = array(
 // Авторизация ВК
 // Токен будем хранить в сессии
 // Параметры приложения
-$clientId     = '7507638'; // ID приложения
+$clientId = '7507638'; // ID приложения
 $clientSecret = '5eQWWHWzc8rb8Xfe8jj4'; // Защищённый ключ
-$redirectUri  = 'https://lavkabonapart.ru/disc/function/VK_json.php'; // Адрес, на который будет переадресован пользователь после прохождения авторизации
+$redirectUri = 'https://lavkabonapart.ru/disc/function/VK_json.php'; // Адрес, на который будет переадресован пользователь после прохождения авторизации
 // Формируем ссылку для авторизации
 $params = array(
-    'client_id'     => $clientId,
-    'redirect_uri'  => $redirectUri,
+    'client_id' => $clientId,
+    'redirect_uri' => $redirectUri,
     'response_type' => 'code',
-    'v'             => '5.74', // (обязательный параметр) версия API, которую Вы используете https://vk.com/dev/versions
+    'v' => '5.74', // (обязательный параметр) версия API, которую Вы используете https://vk.com/dev/versions
     // Права доступа приложения https://vk.com/dev/permissions
     // Если указать "offline", полученный access_token будет "вечным" (токен умрёт, если пользователь сменит свой пароль или удалит приложение).
     // Если не указать "offline", то полученный токен будет жить 12 часов.
-    'scope'         => 'photos,offline',
+    'scope' => 'photos,offline',
 );
 
 // Авторизация ОК
@@ -58,9 +58,9 @@ $redirect_uri = 'https://lavkabonapart.ru/disc/function/OK_json.php'; // Ссы�
 
 $url = 'https://connect.ok.ru/oauth/authorize';
 $params2 = array(
-    'client_id'     => $client_id,
+    'client_id' => $client_id,
     'response_type' => 'code',
-    'redirect_uri'  => $redirect_uri
+    'redirect_uri' => $redirect_uri
 );
 
 ?>
@@ -90,7 +90,8 @@ $params2 = array(
 
 </head>
 
-<body class="theme-royal-blue" data-spy="scroll" data-target="#navbar-nav" data-appearance="light" data-animation="false" data-appearance="light">
+<body class="theme-royal-blue" data-spy="scroll" data-target="#navbar-nav" data-appearance="light"
+      data-animation="false" data-appearance="light">
 
 <!-- =========== Start of Loader ============ -->
 <!--<div class="preloader">
@@ -136,13 +137,11 @@ $params2 = array(
                     <div class="form--v5 bg-color--primary-light--1 px-3 py-4 px-md-5 pt-md-6 rounded--10">
 
 
-
-
-
                         <form method="post" action="function/sign_IN_scripts.php" class="p-2">
                             <div class="form-group">
                                 <label class="form__label text-uppercase font-size--15 font-w--500">Логин:</label>
-                                <input name="login" type="text" id="inputText" class="form-control" placeholder="Email" required=""
+                                <input name="login" type="text" id="inputText" class="form-control" placeholder="Email"
+                                       required=""
                                        autofocus="">
                             </div>
                             <div class="form-group">
@@ -152,21 +151,24 @@ $params2 = array(
                                         <a href="recover-account.html" class="text-color--400">Забыли пароль?</a>
                                     </small>
                                 </div>
-                                <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Пароль"
+                                <input name="password" type="password" id="inputPassword" class="form-control"
+                                       placeholder="Пароль"
                                        required="">
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="exampleCheck1">
-                                        <label class="custom-control-label text-color--400" for="customCheck1">Запомнить меня</label>
+                                        <label class="custom-control-label text-color--400" for="customCheck1">Запомнить
+                                            меня</label>
                                     </div>
                                 </div>
-                                <button name="btn_login" class="btn btn-bg--primary btn-size--md btn-hover--3d" type="submit"><span class="btn__text">Войти</span></button>
+                                <button name="btn_login" class="btn btn-bg--primary btn-size--md btn-hover--3d"
+                                        type="submit"><span class="btn__text">Войти</span></button>
                             </div>
                         </form>
                         <div class="social_link text-center">
-                            <?php echo '<a href="http://oauth.vk.com/authorize?' . http_build_query( $params ) . '"><img src="img/vk-3-240.png" alt=""></a>'; ?>
+                            <?php echo '<a href="http://oauth.vk.com/authorize?' . http_build_query($params) . '"><img src="img/vk-3-240.png" alt=""></a>'; ?>
                             <?php echo '<a href="' . $url . '?' . urldecode(http_build_query($params2)) . '"><img src="img/odnoklassniki.png" alt=""></a>'; ?>
                             <a href="#"><img src="img/facebook-3-240.png" alt=""></a>
                             <a href="#"><img src="img/google-plus-3-240.png" alt=""></a>
@@ -191,12 +193,6 @@ $params2 = array(
 </body>
 
 </html>
-
-
-
-
-
-
 
 
 <!--<!doctype html>
@@ -236,8 +232,8 @@ $params2 = array(
         </form>
         <h2 class="text-center">Войти через:</h2>
         <div class="social_link text-center">
-            <?php /*echo '<a href="http://oauth.vk.com/authorize?' . http_build_query( $params ) . '"><img src="img/vk-3-240.png" alt=""></a>'; */?>
-            <?php /*echo '<a href="' . $url . '?' . urldecode(http_build_query($params2)) . '"><img src="img/odnoklassniki.png" alt=""></a>'; */?>
+            <?php /*echo '<a href="http://oauth.vk.com/authorize?' . http_build_query( $params ) . '"><img src="img/vk-3-240.png" alt=""></a>'; */ ?>
+            <?php /*echo '<a href="' . $url . '?' . urldecode(http_build_query($params2)) . '"><img src="img/odnoklassniki.png" alt=""></a>'; */ ?>
             <a href="#"><img src="img/facebook-3-240.png" alt=""></a>
             <a href="#"><img src="img/google-plus-3-240.png" alt=""></a>
         </div>

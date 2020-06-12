@@ -1,4 +1,5 @@
-<section class="pb-10 pt-0 blog-articles bg-color--primary-light--1" style="margin-top: 5em; padding-top: 2em; background: #E3E3E3;">
+<section class="pb-10 pt-0 blog-articles bg-color--primary-light--1"
+         style="margin-top: 5em; padding-top: 2em; background: #E3E3E3;">
     <div class="container" style="padding-top: 1em">
         <div class="row row-cols-1 row-cols-md-3">
             <?php

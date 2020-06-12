@@ -1,6 +1,6 @@
-<section class="space" style="margin-top: 5em; padding-top: 2em; background: #E3E3E3;">
-    <div class="container">
-        <div class="row m-0 p-0">
+<section class="space" style="margin-top: 5em; padding-top: 0em !important; background: #E3E3E3;">
+    <div class="container" style="padding-top: 1em">
+        <div class="row">
             <?php
             if ($_SESSION['roles_id'] != 1) { ?>
                 <div class="col text-center">
