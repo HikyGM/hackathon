@@ -8,6 +8,12 @@
         </div>
     </div>
     <!-- конец заголовка -->
+        <?php
+    if ($_SESSION['roles_id'] == 1) { ?>
+        <div class="add_but">
+            <a class="btn bg-button m-2" href="?page=blocks/app_add">Создать новую заявку</a>
+        </div>
+    <?php } ?>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -19,7 +25,10 @@
         </thead>
         <tbody>
         <?php
-        $sql = "SELECT a.application_id, u.users_fio, a.application_status, a.application_datetime FROM `applications` a, users u where a.users_id = u.users_id ORDER BY a.`application_id` DESC";
+        if ($_SESSION["roles_id"] == 1)
+            $sql = "SELECT a.application_id, u.users_fio, a.application_status, a.application_datetime FROM `applications` a, users u where a.users_id = u.users_id and u.users_id = ".$_SESSION["ID"]." ORDER BY a.`application_id` DESC";
+        else
+            $sql = "SELECT a.application_id, u.users_fio, a.application_status, a.application_datetime FROM `applications` a, users u where a.users_id = u.users_id ORDER BY a.`application_id` DESC";
         $apps = mysqli_query($link, $sql);
         for ($i = 0; $i < mysqli_num_rows($apps); $i++) {
             $app = mysqli_fetch_array($apps, MYSQLI_ASSOC);

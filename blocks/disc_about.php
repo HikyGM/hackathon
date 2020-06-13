@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_REQUEST["new_comments"]))
+                    {
+                        $sql = "INSERT INTO `meet_comments` (`meet_comments_id`, `meetings_id`, `meet_comments_comment`, `meet_comments_datetime`, `users_id`) VALUES (NULL, '".$_REQUEST["id"]."', '".$_REQUEST["text_comment"]."', '".date("Y-m-d h:i:s")."', '".$_SESSION["ID"]."')";
+                        $apps = mysqli_query($link,  $sql);
+                    }
+                    ?>
 <section class="space" style="margin-top: 5em; padding-top: 0em !important; background: #E3E3E3;">
     <div class="container" style="padding-top: 1em;">
         <div class="py-4 text-center">
@@ -24,117 +32,47 @@
                     <div class="col-md-12 px-lg-auto px-0">
                         <div class="chat-message">
                             <ul class="list-unstyled chat-1 scrollbar-light-blue">
+                                <?php
+                                    $sql = "SELECT u.users_fio, mc.meet_comments_datetime, mc.meet_comments_comment FROM meet_comments mc, users u WHERE mc.users_id = u.users_id and mc.meetings_id = ".$_REQUEST["id"]." ORDER BY mc.meet_comments_datetime DESC";
+    
+                        $comments = mysqli_query($link,  $sql);
+
+                        for ($i = 0; $i < mysqli_num_rows($comments); $i++) {
+                            $comment = mysqli_fetch_array($comments, MYSQLI_ASSOC);
+                                    ?>
+                                
                                 <!-- Сообщение -->
                                 <li class="d-flex justify-content-between mb-4">
                                     <div class="chat-body white ml-2 z-depth-1">
                                         <div class="header">
-                                            <strong class="primary-font">Brad Pitt</strong>
-                                            <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
-                                                ago</small>
+                                            <strong class="primary-font"><?= $comment["users_fio"] ?></strong>
+                                            <small class="pull-right text-muted"><i class="far fa-clock"></i> <?= $comment["meet_comments_datetime"] ?></small>
                                         </div>
                                         <hr class="w-100">
                                         <p class="mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            incididunt ut
-                                            labore et dolore magna aliqua.
+                                            <?= $comment["meet_comments_comment"] ?>
                                         </p>
                                     </div>
                                 </li>
                                 <!-- Конец сообщения -->
-                                <li class="d-flex justify-content-between mb-4">
-                                    <div class="chat-body white ml-2 z-depth-1">
-                                        <div class="header">
-                                            <strong class="primary-font">Brad Pitt</strong>
-                                            <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
-                                                ago</small>
-                                        </div>
-                                        <hr class="w-100">
-                                        <p class="mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="d-flex justify-content-between mb-4">
-                                    <div class="chat-body white ml-2 z-depth-1">
-                                        <div class="header">
-                                            <strong class="primary-font">Brad Pitt</strong>
-                                            <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
-                                                ago</small>
-                                        </div>
-                                        <hr class="w-100">
-                                        <p class="mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="d-flex justify-content-between mb-4">
-                                    <div class="chat-body white ml-2 z-depth-1">
-                                        <div class="header">
-                                            <strong class="primary-font">Brad Pitt</strong>
-                                            <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
-                                                ago</small>
-                                        </div>
-                                        <hr class="w-100">
-                                        <p class="mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="d-flex justify-content-between mb-4">
-                                    <div class="chat-body white ml-2 z-depth-1">
-                                        <div class="header">
-                                            <strong class="primary-font">Brad Pitt</strong>
-                                            <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
-                                                ago</small>
-                                        </div>
-                                        <hr class="w-100">
-                                        <p class="mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="d-flex justify-content-between mb-4">
-                                    <div class="chat-body white ml-2 z-depth-1">
-                                        <div class="header">
-                                            <strong class="primary-font">Brad Pitt</strong>
-                                            <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins
-                                                ago</small>
-                                        </div>
-                                        <hr class="w-100">
-                                        <p class="mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
-                                    </div>
-                                </li>
+                                <?php } ?>
+
                             </ul>
                             <!-- Форма ввода сообщения -->
+                            <form action="" method="post">
                             <div class="white">
                                 <div class="form-group basic-textarea">
                                 <textarea class="form-control pl-2 my-0" id="exampleFormControlTextarea2" rows="3"
-                                          placeholder="Введите сообщение..."></textarea>
+                                          placeholder="Введите сообщение..." name="text_comment"></textarea>
                                 </div>
                             </div>
                             <!-- Кнопка отправки -->
-                            <button type="button" class="btn bg-button float-right">Отправить</button>
+                            <button type="button0" name="new_comments" class="btn bg-button float-right" type="submit">Отправить</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </section>

@@ -24,7 +24,7 @@
             $ID_house = mysqli_fetch_array($house, MYSQLI_ASSOC); ?>
             <tr>
                 <th scope="row"><?php echo $ID_house['buildings_address']; ?></th>
-                <td><?php echo $ID_house['meetings_id']; ?></td>
+                <td><?php $date_1 = strtotime(date("Y-m-d h:i:s")); $date_2 = strtotime($ID_house['meetings_datetime_stop']); if ($date_1 < $date_2) echo "Активный"; else echo "Завершено";   ?></td>
                 <td><?php echo $ID_house['meetings_datetime_stop']; ?></td>
                 <td><?php echo $ID_house['meetings_title']; ?></td>
                 <td>

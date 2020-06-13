@@ -11,7 +11,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="?page=blocks/disc_add">
+            <a class="nav-link" href="?page=blocks/applications_list">
                 Подача заявки
             </a>
         </li>
