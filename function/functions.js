@@ -1,6 +1,5 @@
 $(document).ready(function () {
     var count_quest = 3;
-
     function addInputClick() {
         $('#addInput').bind('click', function () {
             var new_inp = '<div><input type=\"text\" class=\"field\" id=\"inputAdd' +

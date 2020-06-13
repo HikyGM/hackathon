@@ -41,7 +41,7 @@ input[type=datetime-local].form-control {
     height: 570px; }
 
 .card.chat-room .chat-1 {
-    height: 495px; }
+    height: 20em; }
 
 .card.chat-room .friend-list li {
     border-bottom: 1px solid #e0e0e0; }
@@ -101,4 +101,15 @@ input[type=datetime-local].form-control {
     font-weight: 600;}
 .li_drop li:hover{
     background-color: rgba(0,0,0,.075);
+}
+.form-check-label {
+    color: #000000;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.form-check-label:hover {
+    color: #52B570;
 }

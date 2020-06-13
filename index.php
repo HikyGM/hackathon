@@ -7,7 +7,7 @@ if ($_SESSION['ID'] != 0) {
     include('header.php');
     if (isset($_REQUEST["page"])){include($_REQUEST["page"] . ".php");}
     else{
-
+      
         if ($_SESSION['ID']==3){
             include_once("blocks/disc_list_tsg.php");
         }

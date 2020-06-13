@@ -34,7 +34,7 @@
                         <input name="btn_id_vote" type="submit" class="btn bg-button p-2 mt-2 mx-auto" value="Перейти...">
                     </a>
                 </td>
-                <td><?php echo $ID_house['meetings_id']; ?>
+                <td><a class="btn bg-button p-2 mt-2 mx-auto" href="function/protokol_1.pdf" download>Скачать файл</a>
                 </td>
                 <?php } ?>
             </tbody>

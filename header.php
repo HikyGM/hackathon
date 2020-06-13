@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>
-        Активный гражданин
+        Управление МКД
     </title>
     <!-- favicon CSS -->
     <link href="favicon.png" rel="icon" sizes="32x32" type="image/png">
@@ -57,9 +57,7 @@
             <div class="d-flex align-items-center ml-lg-1 ml-xl-2 mr-4 mr-sm-6 m-lg-0">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                           style="color: #52B570; text-decoration: none; display: inline-block; font-weight: 600;"><?= $app["users_fio"] ?>
-                            <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #52B570; text-decoration: none; display: inline-block; font-weight: 600;"><?= $app["users_fio"] ?><b class="caret"></b></a>
                         <ul class="dropdown-menu text-center li_drop py-0">
                             <li class="p-2"><a href="#">Профиль</a></li>
                             <li class="p-2"><a href="#">Уведомления</a></li>
@@ -69,6 +67,11 @@
                         </ul>
                     </li>
                 </ul>
+
+
+
+
+
 
 
             </div>

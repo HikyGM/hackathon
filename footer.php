@@ -7,39 +7,38 @@
                                 <span class="mb-3">
                                         <img src="img/brand-logo-black.png" alt="brand-logo">
                                     </span>
-                        <p>The main objectives of the project are to meet the needs of cryptocurrency projects and users, and to provide access to investment product.</p>
+                        <p>Основными целями проекта являются удовлетворение потребностей пользователей, а также обеспечение доступа к информационному продукту.</p>
                     </div>
                 </div>
                 <!-- end of col -->
                 <div class="col-6 col-md-4 col-lg-4 col-xl-2 mb-2 mb-xl-0">
                     <div class="widget widget-nav">
-                        <span class="widget__title font-size--20 font-w--700 mb-1">Useful Link</span>
+                        <span class="widget__title font-size--20 font-w--700 mb-1">Полезные ссылки</span>
                         <ul>
-                            <li><a href="#">How it works</a></li>
-                            <li><a href="#">Token sale details</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Roadmap</a></li>
-                            <li><a href="#">Documents</a></li>
+                            <li><a href="#">Как это работает</a></li>
+                            <li><a href="#">Разраточики</a></li>
+                            <li><a href="#">Команда</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Документы</a></li>
                         </ul>
                     </div>
                 </div>
                 <!-- end of widget col-->
                 <div class="col-6 col-md-4 col-lg-4 col-xl-2 offset-xl-1 mb-2 mb-xl-0">
                     <div class="widget widget-nav">
-                        <span class="widget__title font-size--20 font-w--700 mb-1">Documents</span>
+                        <span class="widget__title font-size--20 font-w--700 mb-1">Меню</span>
                         <ul>
-                            <li><a href="#">Whitepaper</a></li>
-                            <li><a href="#">Onepager</a></li>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Terms of use</a></li>
-                            <li><a href="#">Agreement</a></li>
+                            <li><a href="#">Помощь</a></li>
+                            <li><a href="#">Разработчикам</a></li>
+                            <li><a href="#">Документация</a></li>
+                            <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
                 </div>
                 <!-- end of widget col-->
                 <div class="col-8 col-sm-8 col-md-4 col-xl-3">
-                    <span class="widget__title font-size--20 font-w--700 mb-1">Address</span>
-                    <p class="font-size--15 mb-2">SpaceMax PTE. LTD. 167 Jalan Bukit Merah #05-12 Connection One Singapore (150167)</p>
+                    <span class="widget__title font-size--20 font-w--700 mb-1">Адресс</span>
+                    <p class="font-size--15 mb-2">Россия, г.Орск, п-р Ленина, д.1</p>
                     <ul class="icon-group mb-0">
                         <li><a href="#" class="color--primary"><i class="fab fa-medium-m"></i></a></li>
                         <li><a href="#" class="color--primary"><i class="fab fa-facebook-f"></i></a></li>
@@ -60,7 +59,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p class="font-size--15">© 2019 <a href="#" class="text-color--400">SpaceMax</a>. All Rights Reserved.</p>
+                    <p class="font-size--15">© 2020 <a href="#" class="text-color--400">ОИК</a>. Все права защищены</p>
                 </div>
             </div>
             <!-- end of mini footer row -->

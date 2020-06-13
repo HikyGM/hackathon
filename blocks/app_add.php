@@ -10,17 +10,22 @@
     <!-- конец заголовка -->
     <?php
     if (isset($_REQUEST["btn_add_app"])) {
-        $sql = "INSERT INTO `applications` (`application_id`, `users_id`, `application_question`, `application_status`, `application_datetime`) VALUES (NULL, '" . $_SESSION["ID"] . "', '" . $_REQUEST["app_question"] . "', 'Подано', '" . date("Y-m-d h:i:s") . "');";
+        $data_app = date("Y-m-d h:i:s");
+        $sql = "INSERT INTO `applications` (`application_id`, `users_id`, `application_question`, `application_status`, `application_datetime`) VALUES (NULL, '" . $_SESSION["ID"] . "', '" . $_REQUEST["app_question"] . "', 'Подано', '" . $data_app . "');";
         $apps = mysqli_query($link, $sql);
         ?>
         <!-- заголовок страницы -->
             <div class="row m-0 p-0">
                 <div class="col text-center">
                     <h3 style="color: #52B570">Заявка принята</h3>
+                    <h3 style="color: #52B570">Номер заявки: <?= mysqli_insert_id($link) ?>. Дата: <?= $data_app ?></h3>
                 </div>
             </div>
         <!-- конец заголовка -->
-        <?php } ?>
+        <?php } 
+        else
+        {
+        ?>
                 <form method="post" action="">
 
                     <div class="row m-0 p-0">
@@ -48,7 +53,9 @@
 
 
                 </form>
-
+<?php
+}
+?>
 
         <!-- end of pagination row -->
 
