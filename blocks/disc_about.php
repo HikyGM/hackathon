@@ -8,7 +8,7 @@ if(isset($_REQUEST["new_comments"]))
                     ?>
 <section class="space" style="margin-top: 5em; padding-top: 0em !important; background: #E3E3E3;">
     <div class="container" style="padding-top: 1em;">
-        <div class="py-4 text-center">
+        <div class="py-4 text-center form_bg" style="border-radius: 0em;">
             <?php
             if (isset($_REQUEST['id'])) {
                 $ID_vote = mysqli_query($link, "SELECT * FROM `meetings` WHERE `meetings_id`='" . $_REQUEST['id'] . "'");

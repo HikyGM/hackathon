@@ -16,7 +16,8 @@
     <!-- Plugins CSS -->
     <!--<link href="css/plugins.min.css" rel="stylesheet">-->
     <!-- Style CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="css/app.css" rel="stylesheet">
     <!-- Your CSS -->
     <link href="css/custom.css" rel="stylesheet">
@@ -32,24 +33,44 @@
                 <img alt="sticky brand-logo" class="navbar-brand__sticky" src="img/brand-logo-black.png">
             </a>
             <!--  End of brand logo -->
-            <button aria-label="Toggle navigation" class="navbar-toggler d-lg-none" data-toggle="navbarToggler" type="button">
+            <button aria-label="Toggle navigation" class="navbar-toggler d-lg-none" data-toggle="navbarToggler"
+                    type="button">
                         <span class="navbar-toggler-icon">
                         </span>
             </button>
             <!-- end of Nav toggler -->
             <div class="navbar-inner">
                 <!--  Nav close button inside off-canvas/ mobile menu -->
-                <button aria-label="Toggle navigation" class="navbar-toggler d-lg-none" data-toggle="navbarToggler" type="button">
+                <button aria-label="Toggle navigation" class="navbar-toggler d-lg-none" data-toggle="navbarToggler"
+                        type="button">
                             <span class="navbar-toggler-icon">
                             </span>
                 </button>
                 <!-- end of Nav Toggoler -->
-				<?php include("blocks/menu".$_SESSION["roles_id"].".php");?>
+                <?php include("blocks/menu" . $_SESSION["roles_id"] . ".php"); ?>
             </div>
+            <?php
+            $sql = "SELECT users_fio FROM users where users_id = '" . $_SESSION["ID"] . "'";
+            $apps = mysqli_query($link, $sql);
+            $app = mysqli_fetch_array($apps, MYSQLI_ASSOC);
+            ?>
             <div class="d-flex align-items-center ml-lg-1 ml-xl-2 mr-4 mr-sm-6 m-lg-0">
-                <a class="color--primary font-w--600 mr-2 d-sm-inline-block" href="function/logout.php">
-                    Выход
-                </a>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                           style="color: #52B570; text-decoration: none; display: inline-block; font-weight: 600;"><?= $app["users_fio"] ?>
+                            <b class="caret"></b></a>
+                        <ul class="dropdown-menu text-center li_drop py-0">
+                            <li class="p-2"><a href="#">Профиль</a></li>
+                            <li class="p-2"><a href="#">Уведомления</a></li>
+                            <li class="p-2"><a href="#">Настройки</a></li>
+                            <hr class="w-90 my-0">
+                            <li class="p-2"><a href="function/logout.php">Выход</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
             </div>
         </div>
         <!-- end of container -->

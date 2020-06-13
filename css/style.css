@@ -94,3 +94,11 @@ input[type=datetime-local].form-control {
     color: #ffffff;
     background: #000000;
 }
+.li_drop a{
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;}
+.li_drop li:hover{
+    background-color: rgba(0,0,0,.075);
+}
