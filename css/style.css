@@ -80,3 +80,17 @@ input[type=datetime-local].form-control {
 .table td, .table th{
     text-align: center;
 }
+.form_bg{
+    background: #ffffff;
+    padding: 1em;
+    border-radius: 1em;
+}
+.bg-button{
+    color: #52B570;
+    background: #ffffff;
+    border: 0.05em solid #000000;
+}
+.bg-button:hover{
+    color: #ffffff;
+    background: #000000;
+}

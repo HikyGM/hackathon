@@ -6,7 +6,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="?page=blocks/surveys_list">
+            <a class="nav-link" href="?page=blocks/survey_list">
                 Опросы
             </a>
         </li>

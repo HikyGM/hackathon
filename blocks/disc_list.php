@@ -26,8 +26,7 @@
                             <form action="?page=blocks/disc_about&id=<?php echo $ID_house['meetings_id']; ?>"
                                   method="post">
                                 <input type="hidden" name="id_vote" value="<?php echo $ID_house['meetings_id']; ?>">
-                                <input name="btn_id_vote" type="submit" class="btn p-1 mt-2 mx-auto" value="Подробнее"
-                                       style="background: #52B570">
+                                <input name="btn_id_vote" type="submit" class="btn bg-button p-1 mt-2 mx-auto" value="Перейти...">
                             </form>
                         </div>
                     </div>

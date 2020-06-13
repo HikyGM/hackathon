@@ -1,6 +1,6 @@
 <section class="space" style="margin-top: 5em; padding-top: 0em !important; background: #E3E3E3;">
     <div class="container" style="padding-top: 1em;">
-        <form method="post" action="function/vote_add.php">
+        <form method="post" action="function/vote_add.php" class="form_bg">
             <div class="row mb-2">
                 <div class="col">
                     <label for="exampleFormControlTextarea1">
@@ -86,7 +86,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" name="btn_add_vote">
+                    <button class="btn bg-button my-2 my-sm-0" type="submit" name="btn_add_vote">
                         Сохранить
                     </button>
                 </div>
