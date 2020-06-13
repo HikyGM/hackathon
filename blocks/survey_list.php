@@ -15,7 +15,7 @@
         </div>
     <?php } ?>
     <table class="table table-hover">
-        <thead>
+        <thead class="thead-dark">
         <tr>
             <th scope="col-1">Дата окончания</th>
             <th scope="col-4">Тема</th>

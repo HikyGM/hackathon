@@ -1,4 +1,5 @@
 <section class="space" style="margin-top: 5em; padding-top: 0em !important; background: #E3E3E3;">
+    <div class="container-fluid px-0">
     <?php
     if ($_SESSION['roles_id'] != 1) { ?>
         <div class="add_but">
@@ -38,5 +39,6 @@
                 <?php } ?>
             </tbody>
         </table>
+    </div>
     </div>
 </section>

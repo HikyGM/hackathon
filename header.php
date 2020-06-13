@@ -27,7 +27,7 @@
     <!-- =========== Start of Navigation (main menu) ============ -->
     <header class="navbar navbar-sticky navbar-expand-lg navbar-light">
         <div class="container position-relative">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
                 <img alt="brand-logo" class="navbar-brand__regular" src="img/brand-logo-black.png">
                 <img alt="sticky brand-logo" class="navbar-brand__sticky" src="img/brand-logo-black.png">
             </a>
@@ -47,7 +47,7 @@
 				<?php include("blocks/menu".$_SESSION["roles_id"].".php");?>
             </div>
             <div class="d-flex align-items-center ml-lg-1 ml-xl-2 mr-4 mr-sm-6 m-lg-0">
-                <a class="color--primary font-w--600 mr-2 d-none d-sm-inline-block" href="function/logout.php">
+                <a class="color--primary font-w--600 mr-2 d-sm-inline-block" href="function/logout.php">
                     Выход
                 </a>
             </div>

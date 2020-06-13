@@ -35,22 +35,17 @@
                         </div>
                         <div class="col">
                             <label for="form-datetime-local">
-                                Дата заявки
-                            </label>
-                            <input name="app_date" class="form-control" value="<?= $app["application_datetime"] ?>"
-                                   type="text" readonly required/>
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col">
-                            <label for="form-datetime-local">
                                 ФИО заявителя
                             </label>
                             <input name="app_date" class="form-control" value="<?= $app["users_fio"] ?>" type="text"
                                    readonly required/>
+                        </div>
+                        <div class="col">
+                            <label for="form-datetime-local">
+                                Дата заявки
+                            </label>
+                            <input name="app_date" class="form-control" value="<?= $app["application_datetime"] ?>"
+                                   type="text" readonly required/>
                         </div>
                     </div>
                     <div class="row mb-2">

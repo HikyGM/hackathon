@@ -1,7 +1,7 @@
 <nav>
     <ul class="navbar-nav" id="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="?page=blocks/disc_list">
                 Собрания
             </a>
         </li>

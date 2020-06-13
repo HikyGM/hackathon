@@ -1,5 +1,5 @@
 <section class="space" style="margin-top: 5em; padding-top: 0em !important; background: #E3E3E3;">
-    <div class="container" style="padding-top: 1em">
+    <div class="container px-0" style="padding-top: 1em">
         <form method="post" action="function/news_add_script.php" class="form_bg">
             <div class="row mb-2">
                 <div class="col">
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col text-center">
                     <button class="btn bg-button my-2 my-sm-0" type="submit" name="btn_add_news">
                         Сохранить
                     </button>

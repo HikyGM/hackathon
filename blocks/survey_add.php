@@ -1,16 +1,16 @@
 <section class="space" style="margin-top: 5em; padding-top: 0em !important; background: #E3E3E3;">
     <div class="container" style="padding-top: 1em;">
-        <form method="post" action="function/vote_add.php" class="form_bg">
+        <form method="post" action="function/vote_add.php" class="form_bg" id="survey_create">
             <div class="row mb-2">
                 <div class="col">
                     <label for="exampleFormControlTextarea1">
-                        Заголовок обсуждения
+                        Заголовок опроса
                     </label>
                     <input name="vote_header" class="form-control" placeholder="Введите заголовок" type="text"
                            required/>
                 </div>
             </div>
-            <div class="row mb-2">
+            <!--<div class="row mb-2">
                 <div class="col">
                     <label for="form-datetime-local">
                         Начало
@@ -25,11 +25,11 @@
                     <input name="vote_date_over" class="datetime-local form-control" id="date_2" type="datetime-local"
                            required/>
                 </div>
-            </div>
+            </div>-->
             <div class="row mb-2">
                 <div class="col">
                     <label for="exampleFormControlTextarea1">
-                        Содержание обсуждения
+                        Содержание опроса
                     </label>
                     <textarea name="vote_text" class="form-control" id="exampleFormControlTextarea1" rows="3"
                               required></textarea>
