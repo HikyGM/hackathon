@@ -7,14 +7,15 @@ if ($_SESSION['ID'] != 0) {
     include('header.php');
     if (isset($_REQUEST["page"])){include($_REQUEST["page"] . ".php");}
     else{
-      
+        if ($_SESSION['ID']==1){
+            include_once("blocks/disc_list.php");
+        }
         if ($_SESSION['ID']==3){
             include_once("blocks/disc_list_tsg.php");
         }
         if ($_SESSION['ID']==4){
             include_once("blocks/disc_list.php");
         }
-        include_once("blocks/disc_list.php");
 
     }
     include_once ('footer.php');

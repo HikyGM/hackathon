@@ -1,5 +1,11 @@
 <section class="space" style="margin-top: 5em; padding-top: 0em !important; background: #E3E3E3;">
     <div class="container" style="padding-top: 1em;">
+        <?php
+        if ($_SESSION['roles_id'] == 2) { ?>
+            <div class="add_but">
+                <a class="btn bg-button m-2" href="?page=blocks/tasks_add">Создать новый опрос</a>
+            </div>
+        <?php } ?>
         <div class="row row-cols-1 row-cols-md-3">
             <?php
             if ($_SESSION['roles_id'] == 2) {
@@ -22,9 +28,9 @@
                                 <p class="card-text"><?php echo $ID_cont['contractors_name']; ?></p>
                             </div>
                             <div class="card-footer">
-                                <form action="?page=blocks/disc_about&id=<?php echo $ID_task['meetings_id']; ?>"
+                                <form action="?page=blocks/disc_about&id=<?php //echo $ID_task['meetings_id']; ?>"
                                       method="post">
-                                    <input type="hidden" name="id_vote" value="<?php echo $ID_task['meetings_id']; ?>">
+                                    <input type="hidden" name="id_vote" value="<?php //echo $ID_task['meetings_id']; ?>">
                                     <input name="btn_id_vote" type="submit" class="btn bg-button p-1 mt-2 mx-auto"
                                            value="Перейти...">
                                 </form>
