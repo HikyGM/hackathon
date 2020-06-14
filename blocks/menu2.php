@@ -21,7 +21,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="?page=blocks/news">
+            <a class="nav-link" href="?page=blocks/tasks_list">
                 Служебные задания
             </a>
         </li>

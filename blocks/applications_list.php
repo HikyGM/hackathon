@@ -3,7 +3,7 @@
     <div class="container" style="padding-top: 1em">
         <div class="row m-0 p-0">
             <div class="col text-center">
-                <h2>Список заявок</h2>
+                <h2>Заявки</h2>
             </div>
         </div>
     </div>

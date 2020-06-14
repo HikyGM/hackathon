@@ -3,7 +3,11 @@
 
 
         <?php
-
+        if (isset($_REQUEST["btn_survey"]))
+        {
+            $sql = "UPDATE `survey_data` SET `survey_data_count` = `survey_data_count` + 1 WHERE `survey_data`.`survey_data_id` = ".$_REQUEST["result_survey"];
+            $survs = mysqli_query($link, $sql);
+        }
         $sql = "SELECT survey_id, survey_text, survey_datetime_stop, buildings_id FROM survey where survey_id = " . $_REQUEST["id"];
         $survs = mysqli_query($link, $sql);
         $surv = mysqli_fetch_array($survs, MYSQLI_ASSOC);
@@ -49,9 +53,9 @@
                     </label>
                     <div class="d-block my-3 text-center">
                         <?php
-                        $sql = "SELECT * FROM `survey_data` WHERE `survey_id` = " . $surv["survey_id"];
+                        $sql = "SELECT * FROM `survey_data` WHERE `survey_id` = " . $surv["survey_id"]." ORDEr BY survey_data_count DESC";
                         $surv_data = mysqli_query($link, $sql);
-                        if ($_SESSION["roles_id"] == 1) {
+                        if ($_SESSION["roles_id"] == 1 && !isset($_REQUEST["btn_survey"])) {
                             for ($i = 0; $i < mysqli_num_rows($surv_data); $i++) {
                                 $surv_row = mysqli_fetch_array($surv_data, MYSQLI_ASSOC);
                                 ?>
@@ -72,18 +76,27 @@
                             </div>
                             <?php
                         }
-                        if ($_SESSION["roles_id"] == 2) {
+                        
+                        if ($_SESSION["roles_id"] == 2 || ($_SESSION["roles_id"] == 1 && isset($_REQUEST["btn_survey"]))) {
+                            $sql = "SELECT sum(`survey_data_count`) as sum_l FROM `survey_data` WHERE `survey_id`= ".$_REQUEST["id"]." GROUP BY `survey_id`";
+                            $result = mysqli_query($link, $sql);
+                            $res = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                            $all_count = $res["sum_l"];
                             for ($i = 0; $i < mysqli_num_rows($surv_data); $i++) {
                                 $surv_row = mysqli_fetch_array($surv_data, MYSQLI_ASSOC);
                                 ?>
 
                                         <h4 class=" d-inline-block"><?= $surv_row["survey_data_option"] ?>
-                                            - <?= $surv_row["survey_data_count"] ?></h4>
+                                            - <?= floor($surv_row["survey_data_count"] / $all_count * 100) ?>% (<?= $surv_row["survey_data_count"] ?>)</h4><br>
 
                                 <?php
                             }
+                            ?>
+                            <h4 class=" d-inline-block">Всего проголосовало - <?= $all_count ?></h4><br>
+                            <?php
                         }
                         ?>
+                        
 
 
                     </div>

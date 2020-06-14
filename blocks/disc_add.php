@@ -4,7 +4,7 @@
             <div class="row mb-2">
                 <div class="col">
                     <label for="exampleFormControlTextarea1">
-                        Заголовок обсуждения
+                        Заголовок собрания
                     </label>
                     <input name="vote_header" class="form-control" placeholder="Введите заголовок" type="text"
                            required/>
@@ -26,6 +26,30 @@
                            required/>
                 </div>
             </div>
+            <div class="row mb-2">
+                            <div class="col">
+                                <label for="exampleFormControlTextarea1">
+                                    Выберите дом
+                                </label>
+                                <select style="padding: 6px 12px;" name="house" class="form-control" required>
+                                    <?php
+                                    $sql = "SELECT * FROM `buildings` WHERE `buildings_id` > 0 ORDER BY `buildings`.`buildings_address` ASC";
+                                    $builds = mysqli_query($link, $sql);
+
+                                    for ($i = 0; $i < mysqli_num_rows($builds); $i++) {
+                                        $build = mysqli_fetch_array($builds, MYSQLI_ASSOC);
+                                    ?>
+                                    
+                                    <option value='<?= $build['buildings_id'] ?>'>
+                                        <?= $build['buildings_address'] ?>
+                                    </option>
+                                    <?php
+                                    }
+                                    ?>
+
+                                </select>
+                            </div>
+                        </div>
             <div class="row mb-2">
                 <div class="col">
                     <label for="exampleFormControlTextarea1">

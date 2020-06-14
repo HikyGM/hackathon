@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/docx/vendor/phpoffice/phpword" />
+      <path value="$PROJECT_DIR$/docx/vendor/composer" />
+      <path value="$PROJECT_DIR$/docx/vendor/pclzip/pclzip" />
+      <path value="$PROJECT_DIR$/docx/vendor/zendframework/zend-escaper" />
+      <path value="$PROJECT_DIR$/docx/vendor/phpoffice/common" />
+    </include_path>
+  </component>
+</project>
